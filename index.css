@@ -1,51 +1,12 @@
 * {
-	margin: 0;
-	border: 0;
-	display: block;
 	color: #d0c9b9;
-	box-sizing: border-box;
-}
-
-section, header {
-	height: 100vh;
-	width: 100%;
-}
-
-h1 {
-	text-align: center;
-	font-size: xx-large;
-}
-
-p {
-	font-size: large;
-	text-align: center;
 }
 
 nav {
 	background-color: #171614;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	justify-content: space-around;
-	display: flex;
 }
 
-nav a {
-	text-decoration: none;
-	font-size: larger;
-}
-
- header img {
-	height: 100%;
-	z-index: -1;
-	position: fixed;
-  }
-
-  header h1 {
-	  padding-top: 15%;
-  }
-
-  .hidden button {
+.hidden button {
 	opacity: 0;
 	background-color: transparent;
 	position: absolute;
@@ -59,16 +20,16 @@ nav a {
 	opacity: 1;
   }
 
-  .brief p {
-	padding: 3%;
-	margin: 2%;
+  section {
+	  margin-bottom: 20%;
+  }
+
+  .para {
 	background-color: rgba(17, 16, 14, 0.8);
-	border-radius: 2em;
   }
 
   .videos {
 	display: grid;
-	height: 100%;
 	grid-template-columns: auto auto;
 	grid-template-rows: auto auto;
   }
@@ -76,34 +37,24 @@ nav a {
   .video {
 	justify-self: center;
 	align-self: center;
-	width: 90%;
-	height: 100%;
-	padding: 5%;
+	width: 500px;
+	height: 300px;
+	padding: 15px;
   }
 
   footer {
 	background-color: rgba(17, 16, 14, 0.8);
-	width: 100%;
-	height: 30vh;
-	padding: 2%;
-	margin-top: 2%;
   }
 
-  .socialLinks {
-	display: flex;
-	justify-content: center;
-  }
-
-  .socialLinks a img {
-	height: 30px;
-	margin: 5px;
-  }
-
-  .contactInfo {
-	display: flex;
-	justify-content: center;
-  }
-
-  .contactInfo p {
-	  margin: 2%;
+  @media only screen and (max-width: 900px) {
+	.videos {
+		display: flex;
+		flex-direction: column;
+	  }
+	
+	  .video {
+		width: 300px;
+		height: 180px;
+		padding: 5px;
+	  }
   }

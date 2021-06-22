@@ -1,0 +1,23 @@
+* {
+	color: #abd5f8;
+}
+
+nav {
+	background-color: #0f1d3a;
+}
+
+.para {
+	background-color: rgba(15, 29, 58, 0.8);
+}
+
+.season .para {
+	/* padding-top: 2%; */
+}
+
+.season .para h3 {
+	padding-bottom: 1%;
+}
+
+footer {
+	background-color: rgba(15, 29, 58, 0.8);
+  }
