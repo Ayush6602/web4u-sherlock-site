@@ -1,19 +1,21 @@
 * {
-	color: #abd5f8;
+	color: rgb(231, 220, 195);
+}
+
+body {
+	background-image: url(https://wallpaperaccess.com/full/1209621.jpg);
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 nav {
-	background-color: #0f1d3a;
+	background-color: rgb(20, 20, 20);
 }
 
 .para {
-	background-color: rgba(15, 29, 58, 0.8);
+	background-color: rgba(20, 20, 20, 0.85);
 }
 
 .season .para h3 {
 	padding-bottom: 15px;
 }
-
-footer {
-	background-color: rgba(15, 29, 58, 0.8);
-  }

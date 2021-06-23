@@ -2,6 +2,12 @@
 	color: #d0c9b9;
 }
 
+body {
+	background-image: url(https://mk0brandsbyovocgj0fx.kinstacdn.com/wp-content/uploads/sherlock-holmes-composite-photo.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
 nav {
 	background-color: #171614;
 }
@@ -25,7 +31,7 @@ nav {
   }
 
   .para {
-	background-color: rgba(17, 16, 14, 0.8);
+	background-color: rgba(17, 16, 14, 0.85);
   }
 
   .videos {
@@ -43,7 +49,7 @@ nav {
   }
 
   footer {
-	background-color: rgba(17, 16, 14, 0.8);
+	background-color: rgba(17, 16, 14, 0.85);
   }
 
   @media only screen and (max-width: 900px) {

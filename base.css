@@ -46,12 +46,6 @@ nav a {
 	font-size: larger;
 }
 
- header img {
-	height: 100%;
-	z-index: -1;
-	position: fixed;
-  }
-
   header h1 {
 	  padding-top: 200px;
   }
