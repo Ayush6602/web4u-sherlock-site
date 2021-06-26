@@ -20,71 +20,71 @@ nav {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-  }
+}
 
-  .hidden button:hover {
+.hidden button:hover {
 	opacity: 1;
-  }
+}
 
-  section {
-	  margin-bottom: 20%;
-  }
+section {
+	margin-bottom: 20%;
+}
 
-  .para {
+.para {
 	background-color: rgba(17, 16, 14, 0.85);
-  }
+}
 
-  .videos {
+.videos {
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-template-rows: auto auto;
-  }
+}
 
-  .video {
+.video {
 	justify-self: center;
 	align-self: center;
 	width: 500px;
 	height: 300px;
 	padding: 15px;
-  }
+}
 
-  footer {
+footer {
 	background-color: rgba(17, 16, 14, 0.85);
-  }
+}
 
-  @media only screen and (max-width: 900px) {
+@media only screen and (max-width: 900px) {
 	.videos {
 		display: flex;
 		flex-direction: column;
-	  }
-	
-	  .video {
+		}
+
+		.video {
 		width: 300px;
 		height: 180px;
 		padding: 5px;
-	  }
-  }
+	}
+}
 
-  footer {
+footer {
 	height: 150px;
 	padding: 10px;
-  }
-  
-  .socialLinks {
+}
+
+.socialLinks {
 	display: flex;
 	justify-content: center;
-  }
+}
 
-  .socialLinks a img {
+.socialLinks a img {
 	height: 30px;
 	margin: 5px;
-  }
+}
 
-  .contactInfo {
+.contactInfo {
 	display: flex;
 	justify-content: center;
-  }
+}
 
-  .contactInfo p {
-	  margin: 5px;
-  }
+.contactInfo p {
+	margin: 5px;
+}
