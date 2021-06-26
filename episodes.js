@@ -47,3 +47,9 @@ document.getElementById('season3Episode2Paragraph').addEventListener('click', fu
 		}, 5000);
 	}
 });
+
+for (const spoilerButton of document.getElementsByClassName('spoilerButton')) {
+	spoilerButton.addEventListener('click', function () {
+		console.log(this.nextElementSibling.classList.toggle('hide'))
+	})
+}

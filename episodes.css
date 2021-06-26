@@ -8,10 +8,69 @@ body {
 	background-attachment: fixed;
 }
 
+nav {
+	background-color: rgb(20, 20, 20);
+}
+
+.hide {
+	transform: translateY(-50%);
+	opacity: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+.spoilerButton {
+	width: 100%;
+	font-size: medium;
+	background-color: transparent;
+	border: 1px;
+	border-style: outset;
+	border-radius: 1em;
+	cursor: pointer;
+	margin: 10px;
+}
+
 .para {
 	background-color: rgba(20, 20, 20, 0.85);
 }
 
-.season .para h3 {
-	padding-bottom: 15px;
+.para p {
+	transition: transform 0.5s, opacity 0.5s;
+	transform-origin: bottom;
+}
+
+.episodeHighlights {
+	display: flex;
+	justify-content: space-around;
+	transition: opacity 0.5s;
+}
+
+.episodeHighlights img {
+	object-fit: cover;
+	height: 200px;
+	margin: 10px;
+	border-radius: 2em;
+}
+
+.episodeSneekpeeks {
+	display: flex;
+	justify-content: space-around;
+	transition: opacity 0.5s;
+}
+
+.episodeSneekpeeks iframe {
+	height: 200px;
+	margin: 10px;
+	border-radius: 2em;
+}
+
+@media only screen and (max-width: 900px) {
+	.episodeHighlights {
+		flex-direction: column;
+	}
+
+	.episodeHighlights img {
+		height: 150px;
+	}
+	
 }
