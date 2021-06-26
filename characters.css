@@ -12,30 +12,10 @@ img {
 	max-height: 100%;
 }
 
-header {
-	height: 100vh;
-	width: 100%;
-}
-
-header img {
-    height: 100%;
-	width: 100%;
-    z-index: -1;
-    position: fixed;
-}
-
-h1 {
-	text-align: center;
-	font-size: xx-large;
-}
-
-header h1 {
-	padding-top: 20%;
-}
-
-p {
-	font-size: large;
-	text-align: center;
+body {
+	background-image: url(https://wallup.net/wp-content/uploads/2017/03/29/90386-street-England-London-dark.jpg);
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 .descriptions {
@@ -75,7 +55,6 @@ p {
 	visibility: hidden;
 	border-radius: inherit;
 	opacity: 0;
-	transition: opacity .2s, visibility .2s;
 	font-size: large;
 }
 
@@ -84,41 +63,10 @@ p {
 	opacity: 0.8;
 }
 
-nav {
-	background-color: #171614;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	justify-content: space-around;
-	display: flex;
-}
-
-nav a {
-	text-decoration: none;
-	font-size: larger;
-}
-
-footer {
-	background-color: rgba(17, 16, 14, 0.85);
-	height: 150px;
-	padding: 10px;
-}
-  
-.socialLinks {
-	display: flex;
-	justify-content: center;
-}
-
-.socialLinks a img {
-	height: 30px;
-	margin: 5px;
-}
-
-.contactInfo {
-	display: flex;
-	justify-content: center;
-}
-
-.contactInfo p {
-	margin: 5px;
+@media (max-width: 900px) {
+	.descriptions {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: auto auto auto auto auto auto auto auto auto;
+	}
 }
