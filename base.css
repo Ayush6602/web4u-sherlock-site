@@ -37,6 +37,7 @@ nav {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	background-color: #171614;
 	justify-content: space-around;
 	display: flex;
 }
@@ -46,18 +47,43 @@ nav a {
 	font-size: larger;
 }
 
-  header h1 {
-	  padding-top: 200px;
-  }
+header h1 {
+	padding-top: 200px;
+}
 
-  .para {
+.para {
 	padding: 10px;
 	margin: 30px;
 	border-radius: 2em;
-  }
+}
 
-  @media only screen and (max-width: 900px) {
-	  p {
-		  font-size: medium;
-	  }
-  }
+@media only screen and (max-width: 900px) {
+	p {
+		font-size: medium;
+	}
+}
+
+footer {
+	background-color: rgba(17, 16, 14, 0.85);
+	height: 150px;
+	padding: 10px;
+}
+  
+.socialLinks {
+	display: flex;
+	justify-content: center;
+}
+
+.socialLinks a img {
+	height: 30px;
+	margin: 5px;
+}
+
+.contactInfo {
+	display: flex;
+	justify-content: center;
+}
+
+.contactInfo p {
+	margin: 5px;
+}

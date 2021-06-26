@@ -8,10 +8,6 @@ body {
 	background-attachment: fixed;
 }
 
-nav {
-	background-color: #171614;
-}
-
 .hidden button {
 	opacity: 0;
 	background-color: transparent;
@@ -56,35 +52,11 @@ footer {
 	.videos {
 		display: flex;
 		flex-direction: column;
-		}
+	}
 
-		.video {
+	.video {
 		width: 300px;
 		height: 180px;
 		padding: 5px;
 	}
-}
-
-footer {
-	height: 150px;
-	padding: 10px;
-}
-
-.socialLinks {
-	display: flex;
-	justify-content: center;
-}
-
-.socialLinks a img {
-	height: 30px;
-	margin: 5px;
-}
-
-.contactInfo {
-	display: flex;
-	justify-content: center;
-}
-
-.contactInfo p {
-	margin: 5px;
 }
