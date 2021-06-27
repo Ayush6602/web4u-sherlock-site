@@ -1,3 +1,21 @@
+const tabs = document.getElementsByClassName('tab');
+const tabContents = document.getElementsByClassName('tabcontent');
+for (let index = 0; index < tabs.length; index++) {
+	const tab = tabs[index];
+	tab.addEventListener('click', function () {
+		tabs[index].classList.toggle('active');
+		for (let idx = 0; idx < tabs.length; idx++) {
+			if (idx == index) continue;
+			tabs[idx].classList.remove('active')
+		}
+		tabContents[index].classList.toggle('hide');
+		for (let idx = 0; idx < tabContents.length; idx++) {
+			if (idx == index) continue;
+			tabContents[idx].classList.add('hide')
+		}
+	});
+}
+
 const season1Episode3ParagraphInnerText = document.getElementById('season1Episode3Paragraph').innerText;
 const season3Episode2ParagraphInnerText = document.getElementById('season3Episode2Paragraph').innerText;
 const ending1 = "Mr. Bangad pick up the phone agrees that he might have mistakenly taken the letter from Mr. Das during his last business meeting. And has agreed to return the same asap."
