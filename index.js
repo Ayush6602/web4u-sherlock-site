@@ -23,7 +23,7 @@ document.getElementById('yatnContactParagraph').addEventListener('click', functi
 		this.parentElement.append('It seems Mr. Das has picked up the phone, maybe the numbers have switched.');
 		setTimeout(() => {
 			this.parentElement.lastChild.remove();
-		}, 3000);
+		}, 5000);
 		sessionStorage.setItem('sherlockStatus', '3');
 	}
 });
@@ -33,7 +33,7 @@ document.getElementById('ayushContactParagraph').addEventListener('click', funct
 		this.innerText = 'Ayush: S1E3-S3E2';
 		setTimeout(() => {
 			this.innerText = ayushContactParagraphInnerText;
-		}, 3000);
+		}, 5000);
 		sessionStorage.setItem('sherlockStatus', '4');
 	}
 });
