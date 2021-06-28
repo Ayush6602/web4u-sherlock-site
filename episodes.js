@@ -1,18 +1,22 @@
-const tabs = document.getElementsByClassName('tab');
-const tabContents = document.getElementsByClassName('tabcontent');
-for (let index = 0; index < tabs.length; index++) {
-	const tab = tabs[index];
+for (const tab of document.getElementsByClassName('tab')) {
+	let tabContent = tab.parentElement.nextElementSibling.firstElementChild;
+	let tempTab = tab;
+	while (tempTab = tempTab.previousElementSibling) {
+		tabContent = tabContent.nextElementSibling;
+	}
 	tab.addEventListener('click', function () {
-		tabs[index].classList.toggle('active');
-		for (let idx = 0; idx < tabs.length; idx++) {
-			if (idx == index) continue;
-			tabs[idx].classList.remove('active')
+		for (const siblingTab of tab.parentElement.children) {
+			if (tab != siblingTab) {
+				siblingTab.classList.remove('active');
+			}
 		}
-		tabContents[index].classList.toggle('hide');
-		for (let idx = 0; idx < tabContents.length; idx++) {
-			if (idx == index) continue;
-			tabContents[idx].classList.add('hide')
+		for (const siblingTabContent of tabContent.parentElement.children) {
+			if (tabContent != siblingTabContent) {
+				siblingTabContent.classList.add('hide');
+			}
 		}
+		tab.classList.toggle('active');
+		tabContent.classList.toggle('hide');
 	});
 }
 
