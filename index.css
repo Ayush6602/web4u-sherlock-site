@@ -30,6 +30,23 @@ section {
 	background-color: rgba(17, 16, 14, 0.85);
 }
 
+.merchs {
+	margin: 30px;
+	display: flex;
+	background-color: rgba(17, 16, 14, 0.85);
+	justify-content: space-around;
+	align-items: flex-end;
+	border-radius: 1em;
+}
+
+.merch {
+	margin: 10px;
+}
+
+.merch > p {
+	margin: 10px;
+}
+
 .videos {
 	display: grid;
 	grid-template-columns: auto auto;
@@ -41,7 +58,6 @@ section {
 	align-self: center;
 	width: 500px;
 	height: 300px;
-	/* padding: 15px; */
 	margin: 10px;
 }
 
@@ -50,6 +66,15 @@ footer {
 }
 
 @media only screen and (max-width: 900px) {
+	.merchs {
+		overflow-x: scroll;
+		justify-content: space-between;
+	}
+
+	.merch img {
+		height: 200px;
+	}
+
 	.videos {
 		display: flex;
 		flex-direction: column;
