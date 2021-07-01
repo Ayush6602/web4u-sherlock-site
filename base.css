@@ -39,14 +39,36 @@ nav {
 	top: 0;
 	width: 100%;
 	background-color: #171614;
-	justify-content: space-around;
+	align-items: center;
 	display: flex;
 	z-index: 10;
+	height: 6vh;
+}
+
+.links{
+	padding-left: 60%;
+	width: 80%;
+	display: inherit;
+	justify-content: space-around;
 }
 
 nav a {
 	text-decoration: none;
 	font-size: larger;
+}
+
+.logo img{
+	background-color: white;
+	height: 6vh;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.logo{
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 header h1 {
@@ -62,6 +84,11 @@ header h1 {
 @media only screen and (max-width: 900px) {
 	p {
 		font-size: medium;
+	}
+
+	.links{
+		padding-left: 15%;
+		padding-right: 5px;
 	}
 }
 

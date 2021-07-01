@@ -100,4 +100,8 @@ body {
 	.description-img{
 		margin-left: 13vw;
 	}
+
+	.logo p{
+		font-size: medium;
+	}
 }
