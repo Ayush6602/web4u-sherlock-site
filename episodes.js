@@ -20,58 +20,49 @@ for (const tab of document.getElementsByClassName('tab')) {
 	});
 }
 
-const season1Episode3ParagraphInnerText = document.getElementById('season1Episode3Paragraph').innerText;
-const season3Episode2ParagraphInnerText = document.getElementById('season3Episode2Paragraph').innerText;
-const ending1 = "Mr. Bangad pick up the phone agrees that he might have mistakenly taken the letter from Mr. Das during his last business meeting and has agreed to return the same asap."
-const ending2 = "Feeling restless you search Mr. Bangad's house and find a copy of the same letter. The letter contains details about many black market deals funded by Mr. Das. Mr. Bangad was trying to get it to the authorities but was threatned and had to surrender."
-let sawEnding1InS1 = false;
-let sawEnding1InS2 = false;
-let sawEnding2 = false;
+const season1Episode3Text = document.getElementById('season1Episode3Text').innerText;
+const season3Episode1Text = document.getElementById('season3Episode1Text').innerText;
+// what to fill here?
+const season1Episode3ReplacementText = 'After going through the case files you realize the most suitable place for them to plant the bomb is place_1.'
+const season3Episode1ReplacementText1 = 'After going through the case files you deduce the most suitable place for them to plant the bomb is place_2.'
+const season3Episode1ReplacementText2 = 'You suspect Mr. Yatn as the mastermind behind the incidents, either contact him from your home or follow the direct route to the secret_page to find his mansion.'
 
-document.getElementById('season1Episode3Paragraph').addEventListener('mouseover', function () {
-	if ((sessionStorage.getItem('sherlockStatus') === '4' || sessionStorage.getItem('sherlockStatus') === '5') && !sawEnding1InS2 && !sawEnding2) {
-		this.innerText = ending1;
-		sawEnding1InS1 = true;
+document.getElementById('season1Episode3Text').addEventListener('click', function () {
+	if (sessionStorage.getItem('sherlockStatus') === '4' || sessionStorage.getItem('sherlockStatus') === '5') {
+		this.innerText = season1Episode3ReplacementText;
 		setTimeout(() => {
-			this.innerText = season1Episode3ParagraphInnerText;
+			this.innerText = season1Episode3Text;
 		}, 5000);
 		sessionStorage.setItem('sherlockStatus', '5');
+		sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '5');
 	}
-});
 
-document.getElementById('season1Episode3Paragraph').addEventListener('click', function () {
-	if (sessionStorage.getItem('sherlockStatus') === '5' && sawEnding1InS2) {
-		this.innerText = ending2;
-		sawEnding2 = true;
+	if (sessionStorage.getItem('sherlockStatus') === '4.1' || sessionStorage.getItem('sherlockStatus') === '5') {
+		this.innerText = season1Episode3ReplacementText;
 		setTimeout(() => {
-			this.innerText = season1Episode3ParagraphInnerText;
-		}, 5000);
-	}
-});
-
-document.getElementById('season3Episode2Paragraph').addEventListener('mouseover', function () {
-	if ((sessionStorage.getItem('sherlockStatus') === '4' || sessionStorage.getItem('sherlockStatus') === '5') && !sawEnding1InS1 && !sawEnding2) {
-		this.innerText = ending1;
-		sawEnding1InS2 = true;
-		setTimeout(() => {
-			this.innerText = season3Episode2ParagraphInnerText;
+			this.innerText = season1Episode3Text;
 		}, 5000);
 		sessionStorage.setItem('sherlockStatus', '5');
+		sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '5');
 	}
 });
 
-document.getElementById('season3Episode2Paragraph').addEventListener('click', function () {
-	if (sessionStorage.getItem('sherlockStatus') === '5' && sawEnding1InS1) {
-		this.innerText = ending2;
-		sawEnding2 = true;
+document.getElementById('season3Episode1Text').addEventListener('click', function () {
+	if (sessionStorage.getItem('sherlockStatus') === '4.1' || sessionStorage.getItem('sherlockStatus') === '5.1') {
+		this.innerText = season3Episode1ReplacementText1;
 		setTimeout(() => {
-			this.innerText = season3Episode2ParagraphInnerText;
+			this.innerText = season3Episode1Text;
 		}, 5000);
+		sessionStorage.setItem('sherlockStatus', '5.1');
+		sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '5.1');
 	}
-});
 
-for (const spoilerButton of document.getElementsByClassName('spoilerButton')) {
-	spoilerButton.addEventListener('click', function () {
-		console.log(this.nextElementSibling.classList.toggle('hide'))
-	})
-}
+	if (sessionStorage.getItem('sherlockStatus') === '3.1' || sessionStorage.getItem('sherlockStatus') === '4.2') {
+		this.innerText = season3Episode1ReplacementText2;
+		setTimeout(() => {
+			this.innerText = season3Episode1Text;
+		}, 5000);
+		sessionStorage.setItem('sherlockStatus', '4.2');
+		sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '4.2');
+	}
+})

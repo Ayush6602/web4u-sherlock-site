@@ -1,39 +1,43 @@
 const briefParagraphInnerText = document.getElementById('briefParagraph').innerText;
-const ayushContactParagraphInnerText = document.getElementById('ayushContactParagraph').innerText;
+const briefParagraphReplacementText1 = 'The London police seem quite frazzled about something, ask a government official what it might be about.';
+const briefParagraphReplacementText2 = 'You recall that a similar incident had happened in the past in either S1E3 or S3E1. Look at the case files of either of these to find more useful information.'
+const copyrightText = document.getElementById('copyrightParagraph').innerText;
+const copyrightReplacementText = 'After talking to him you deduce that the bomb is in place_2.';
 
 document.getElementById('challengeButton').addEventListener('click', function () {
 	alert('Find clues and solve the mystery of this site');
 	this.style.opacity = 0;
-	sessionStorage.setItem('sherlockStatus', '0');
+	sessionStorage.setItem('sherlockStatus', '1');
+	sessionStorage.setItem('sherlockPath', '1');
 });
 
-document.getElementById('briefParagraph').addEventListener('pointerenter', function () {
-	if (sessionStorage.getItem('sherlockStatus') === '0' || sessionStorage.getItem('sherlockStatus') === '1') {
-		this.innerText = briefParagraphInnerText + ' (You overhear some citizens) "The yard seems quite frazzeled, something must have happened"';
-		sessionStorage.setItem('sherlockStatus', '1');
+document.getElementById('briefParagraph').addEventListener('mouseover', function () {
+	if (sessionStorage.getItem('sherlockStatus') === '1' || sessionStorage.getItem('sherlockStatus') === '2') {
+		this.innerText = briefParagraphReplacementText1;
+		setTimeout(() => {
+			this.innerText = briefParagraphInnerText;
+		}, 5000);
+		sessionStorage.setItem('sherlockStatus', '2');
+		sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '2');
 	}
-});
 
-document.getElementById('briefParagraph').addEventListener('pointerleave', function () {
-	this.innerText = briefParagraphInnerText;
+	if (sessionStorage.getItem('sherlockStatus') === '3.1' || sessionStorage.getItem('sherlockStatus') === '4.1') {
+		this.innerText = briefParagraphReplacementText2;
+		setTimeout(() => {
+			this.innerText = briefParagraphInnerText;
+		}, 5000);
+		sessionStorage.setItem('sherlockStatus', '4.1');
+		sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '4.1');
+	}
 });
 
 document.getElementById('yatnContactParagraph').addEventListener('click', function () {
-	if (sessionStorage.getItem('sherlockStatus') === '2' || sessionStorage.getItem('sherlockStatus') === '3') {
-		this.parentElement.append('It seems Mr. Das has picked up the phone, maybe the numbers have switched.');
+	if (sessionStorage.getItem('sherlockStatus') === '4.2' || sessionStorage.getItem('sherlockStatus') === '5.2') {
+		document.getElementById('copyrightParagraph').innerText = copyrightReplacementText;
 		setTimeout(() => {
-			this.parentElement.lastChild.remove();
+			document.getElementById('copyrightParagraph').innerText = copyrightText;
 		}, 5000);
-		sessionStorage.setItem('sherlockStatus', '3');
-	}
-});
-
-document.getElementById('ayushContactParagraph').addEventListener('click', function () {
-	if (sessionStorage.getItem('sherlockStatus') === '3' || sessionStorage.getItem('sherlockStatus') === '4') {
-		this.innerText = 'Ayush: S1E3-S3E2';
-		setTimeout(() => {
-			this.innerText = ayushContactParagraphInnerText;
-		}, 5000);
-		sessionStorage.setItem('sherlockStatus', '4');
+		sessionStorage.setItem('sherlockStatus', '5.2');
+		sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '5.2');
 	}
 });
