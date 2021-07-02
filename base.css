@@ -10,11 +10,6 @@ header, footer {
 	width: 100%;
 }
 
-section {
-	margin-left: auto;
-	margin-right: auto;
-}
-
 header {
 	height: 100vh;
 }

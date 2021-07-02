@@ -14,13 +14,15 @@ nav {
 }
 
 section {
-	padding: 20px; 
 	backdrop-filter: blur(10px);
+	padding: 10px;
+	margin: 10px;
 }
 
 .tabholder {
 	display: flex;
 	margin: 10px;
+	min-height: 300px;
 }
 
 .tabholder > .tabs {
@@ -28,20 +30,15 @@ section {
 	width: 20%;
 }
 
-.tabholder > .tabs > .tab > button {
-	float: right;
-}
-
 .tabholder > .tabcontents {
 	width: 80%;
-	background-color: rgba(20, 20, 20, 0.7);
 	border-radius: 1em;
-	padding: 10px;
+	background-color: rgba(20, 20, 20, 0.7);
 }
 
 .tabholder > .tabcontents > .tabcontent {
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 .tabs {
@@ -63,6 +60,7 @@ section {
 .tabcontents {
 	display: flex;
 	justify-content: space-around;
+	padding: 10px;
 }
 
 .tabcontent {
@@ -84,6 +82,7 @@ section {
 @media only screen and (max-width: 900px) {
 	.tabholder {
 		flex-direction: column;
+		min-height: auto;
 	}
 
 	.tabholder > .tabs{
