@@ -30,6 +30,30 @@ section {
 	width: 20%;
 }
 
+.tabholder > .tabs > .tab > button {
+	cursor: pointer;
+	font-size: medium;
+	padding-bottom: 5px;
+	position: relative;
+}
+
+.tabholder > .tabs > .tab > button::before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 1px;
+	bottom: 0;
+	left: 0;
+	background-color: #FFF;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out;
+}
+
+.tabholder > .tabs > .tab > button:hover::before {
+	visibility: visible;
+  	width: 100%;
+}
+
 .tabholder > .tabcontents {
 	width: 80%;
 	border-radius: 1em;
@@ -51,10 +75,29 @@ section {
 	margin: 10px;
 }
 
-.tab>button {
+.tabholder > .tabcontents .tab > button {
 	cursor: pointer;
 	font-size: medium;
 	padding-bottom: 5px;
+	position: relative;
+}
+
+.tabholder > .tabcontents .tab > button::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	bottom: 0;
+	left: 0;
+	background-color: #FFF;
+	visibility: hidden;
+	transform: scaleX(0);
+	transition: all 0.3s ease-in-out;
+}
+
+.tabholder > .tabcontents .tab > button:hover::before {
+	visibility: visible;
+  	transform: scaleX(1);
 }
 
 .tabcontents {
@@ -69,7 +112,7 @@ section {
 	width: 100%;
 }
 
-.tabcontent>img {
+.tabcontent > img {
 	object-fit: cover;
 	width: 30%;
 }

@@ -22,6 +22,7 @@ for (const tab of document.getElementsByClassName('tab')) {
 
 const season1Episode3Text = document.getElementById('season1Episode3Text').innerText;
 const season3Episode1Text = document.getElementById('season3Episode1Text').innerText;
+const season4Episode2ImageSource = document.getElementById('season4Episode2Image1').getAttribute('src');
 // what to fill here?
 const pathOutcomes = {
 	'12345': ['Noob Holmes', 'Even after searching throughly you could not find any traces of any bomb and then you hear a big boom. The path you chose was the easiest one possible. Is lestrade really the most powerful government official you have contacts with?'],
@@ -89,11 +90,32 @@ document.getElementById('endingImagePlace1').addEventListener('click', function 
 document.getElementById('endingImagePlace2').addEventListener('click', function () {
 	if (sessionStorage.getItem('sherlockStatus') === '5.1' || sessionStorage.getItem('sherlockStatus') === '5.2' || sessionStorage.getItem('sherlockStatus') === '5.3') {
 		let path = sessionStorage.getItem('sherlockPath');
-		console.log(path);
 		document.getElementById('sherlockLevel').innerText = pathOutcomes[path][0];
 		document.getElementById('sherlockLevelText').innerText = pathOutcomes[path][1];
 		document.getElementById('modal').style.display = "block";
+		if (sessionStorage.getItem('sherlockStatus') === '5.3') {
+			document.getElementById('theLyingDetectiveButton').setAttribute('draggable', 'true');
+			document.getElementById('theLyingDetectiveButton').addEventListener('dragstart', function (event) {
+				event.dataTransfer.setData('id', this.id);
+			});
+			document.getElementById('season4Episode2HighlightsButton').addEventListener('dragover', function (event) {
+				event.preventDefault();
+			});
+			document.getElementById('season4Episode2HighlightsButton').addEventListener('drop', function (event) {
+				if (event.dataTransfer.getData('id') === 'theLyingDetectiveButton') {
+					if (!this.parentElement.classList.contains('active')) this.parentElement.click();
+					document.getElementById('season4Episode2Image1').setAttribute('src', 'nope.png');
+					setTimeout(() => {
+						document.getElementById('season4Episode2Image1').setAttribute('src', season4Episode2ImageSource);
+						if (this.parentElement.classList.contains('active')) this.parentElement.click();
+					}, 5000);
+				}
+			});
+		}
 		sessionStorage.removeItem('sherlockStatus');
 		sessionStorage.removeItem('sherlockPath');
 	}
 });
+
+
+
