@@ -4,12 +4,17 @@ const briefParagraphReplacementText2 = 'You recall that a similar incident had h
 const copyrightText = document.getElementById('copyrightParagraph').innerText;
 const copyrightReplacementText = 'After talking to him you deduce that the bomb is in place_2.';
 
-document.getElementById('challengeButton').addEventListener('click', function () {
-	alert('Find clues and solve the mystery of this site');
-	this.style.opacity = 0;
-	sessionStorage.setItem('sherlockStatus', '1');
-	sessionStorage.setItem('sherlockPath', '1');
-});
+if (sessionStorage.getItem('sherlockStatus')) {
+	document.getElementById('challengeButton').style.display = 'none';
+}
+else {
+	document.getElementById('challengeButton').addEventListener('click', function () {
+		alert('Find clues and solve the mystery of this site');
+		this.style.display = 'none';
+		sessionStorage.setItem('sherlockStatus', '1');
+		sessionStorage.setItem('sherlockPath', '1');
+	});
+}
 
 document.getElementById('briefParagraph').addEventListener('mouseover', function () {
 	if (sessionStorage.getItem('sherlockStatus') === '1' || sessionStorage.getItem('sherlockStatus') === '2') {
