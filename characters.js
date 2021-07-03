@@ -45,11 +45,6 @@ document.getElementById('mycroftText').addEventListener('click', function () {
 });
 
 if (window.innerWidth <= 900) {
-    let descriptions = document.getElementsByClassName('description-img-text');
-    for (let description of descriptions) {
-        description.classList.toggle('modal');
-    }
-
     let descriptionImages = document.getElementsByClassName('description-img');
     for (let image of descriptionImages) {
         let modalText = image.lastElementChild;
@@ -57,7 +52,6 @@ if (window.innerWidth <= 900) {
             modalText.style.display = 'block';
         });
     }
-
 
     let closeBtns = document.getElementsByClassName('close');
     for (let closeBtn of closeBtns) {
