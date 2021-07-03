@@ -110,6 +110,10 @@ section, header {
 		margin-left: 13vw;
 	}
 
+	.description-img:hover {
+		transform: scale(1);
+	}
+
 	.logo p{
 		font-size: medium;
 	}
