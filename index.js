@@ -2,7 +2,7 @@ const briefParagraphInnerText = document.getElementById('briefParagraph').innerT
 const briefParagraphReplacementText1 = 'The London police seem quite frazzled about something, ask a government official what it might be about.';
 const briefParagraphReplacementText2 = 'You recall that a similar incident had happened in the past in either S1E3 or S3E1. Look at the case files of either of these to find more useful information.'
 const copyrightText = document.getElementById('copyrightParagraph').innerText;
-const copyrightReplacementText = 'After talking to him you deduce that the bomb is in place_2.';
+const copyrightReplacementText = 'After talking to him you deduce that the bomb is in Westminster hall. Maybe you can find some references in previous case files highlights.';
 
 if (sessionStorage.getItem('sherlockStatus')) {
 	document.getElementById('challengeButton').style.display = 'none';
