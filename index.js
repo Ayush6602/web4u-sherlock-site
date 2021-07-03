@@ -9,7 +9,7 @@ if (sessionStorage.getItem('sherlockStatus')) {
 }
 else {
 	document.getElementById('challengeButton').addEventListener('click', function () {
-		alert('Find clues and solve the mystery of this site');
+		alert('Find clues and solve the mystery of this site, first try lokking for a brief.');
 		this.style.display = 'none';
 		sessionStorage.setItem('sherlockStatus', '1');
 		sessionStorage.setItem('sherlockPath', '1');
