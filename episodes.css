@@ -94,8 +94,8 @@ section {
 #modalContent{
 	width: fit-content;
 	height: fit-content;
-	max-width: 50%;
-	max-height: 50%;
+	max-width: 60%;
+	max-height: 100%;
 	margin: auto;
 	background-color: white;
 	border: 1px solid #888;

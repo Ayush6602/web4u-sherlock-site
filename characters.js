@@ -11,8 +11,10 @@ document.getElementById('lestradeText').addEventListener('click', function () {
         setTimeout(() => {
             this.innerText = lestradeText;
         }, 5000);
-        sessionStorage.setItem('sherlockStatus', '3');
-        sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '3');
+        if (sessionStorage.getItem('sherlockStatus') !== '3') {
+            sessionStorage.setItem('sherlockStatus', '3');
+            sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '3');
+        }
     }
 });
 
@@ -22,8 +24,10 @@ document.getElementById('watsonText').addEventListener('click', function () {
         setTimeout(() => {
             this.innerText = watsonText;
         }, 5000);
-        sessionStorage.setItem('sherlockStatus', '4');
-        sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '4');
+        if (sessionStorage.getItem('sherlockStatus') !== '4') {
+            sessionStorage.setItem('sherlockStatus', '4');
+            sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '4');
+        }
     }
 });
 
@@ -33,8 +37,10 @@ document.getElementById('mycroftText').addEventListener('click', function () {
         setTimeout(() => {
             this.innerText = mycroftText;
         }, 5000);
-        sessionStorage.setItem('sherlockStatus', '3.1');
-        sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '3.1');
+        if (sessionStorage.getItem('sherlockStatus') !== '3.1') {
+            sessionStorage.setItem('sherlockStatus', '3.1');
+            sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '3.1');
+        }
     }
 });
 

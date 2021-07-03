@@ -17,8 +17,10 @@ document.getElementById('briefParagraph').addEventListener('mouseover', function
 		setTimeout(() => {
 			this.innerText = briefParagraphInnerText;
 		}, 5000);
-		sessionStorage.setItem('sherlockStatus', '2');
-		sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '2');
+		if (sessionStorage.getItem('sherlockStatus') !== '2') {
+			sessionStorage.setItem('sherlockStatus', '2');
+			sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '2');
+		}
 	}
 
 	if (sessionStorage.getItem('sherlockStatus') === '3.1' || sessionStorage.getItem('sherlockStatus') === '4.1') {
@@ -26,8 +28,10 @@ document.getElementById('briefParagraph').addEventListener('mouseover', function
 		setTimeout(() => {
 			this.innerText = briefParagraphInnerText;
 		}, 5000);
-		sessionStorage.setItem('sherlockStatus', '4.1');
-		sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '4.1');
+		if (sessionStorage.getItem('sherlockStatus') !== '4.1') {
+			sessionStorage.setItem('sherlockStatus', '4.1');
+			sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '4.1');
+		}
 	}
 });
 
@@ -37,7 +41,9 @@ document.getElementById('yatnContactParagraph').addEventListener('click', functi
 		setTimeout(() => {
 			document.getElementById('copyrightParagraph').innerText = copyrightText;
 		}, 5000);
-		sessionStorage.setItem('sherlockStatus', '5.2');
-		sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '5.2');
+		if (sessionStorage.getItem('sherlockStatus') !== '5.2') {
+			sessionStorage.setItem('sherlockStatus', '5.2');
+			sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '5.2');
+		}
 	}
 });
