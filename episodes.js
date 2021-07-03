@@ -65,4 +65,14 @@ document.getElementById('season3Episode1Text').addEventListener('click', functio
 		sessionStorage.setItem('sherlockStatus', '4.2');
 		sessionStorage.setItem('sherlockPath', sessionStorage.getItem('sherlockPath') + '4.2');
 	}
-})
+});
+
+document.getElementById('heading').addEventListener('click', function () {
+	document.getElementById('modal').style.display = "block";
+	console.log('Changed style to block!');
+});
+
+document.getElementById('close').addEventListener('click', function () {
+	document.getElementById('modal').style.display = "none";
+	console.log('Changed style to none!');
+});
