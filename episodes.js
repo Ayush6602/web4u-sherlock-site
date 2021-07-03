@@ -23,7 +23,6 @@ for (const tab of document.getElementsByClassName('tab')) {
 const season1Episode3Text = document.getElementById('season1Episode3Text').innerText;
 const season3Episode1Text = document.getElementById('season3Episode1Text').innerText;
 const season4Episode2ImageSource = document.getElementById('season4Episode2Image1').getAttribute('src');
-// what to fill here?
 const pathOutcomes = {
 	'12345': ['Noob Holmes', 'Even after searching throughly you could not find any traces of any bomb and then you hear a big boom. The path you chose was the easiest one possible. Is lestrade really the most powerful government official you have contacts with?'],
 	'123.14.15': ['Fake Holmes', 'Even after searching throughly you could not find any traces of any bomb and then you hear a big boom.  Did you refer to the correct case file?'],
